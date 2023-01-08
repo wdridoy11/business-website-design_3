@@ -1,0 +1,543 @@
+/*========================= google font family link =========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+/*========================= common css  =========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #021327;
+    --primary2-color: #34b48d;
+    --primary3-color: #ffffff;
+    --primary4-color: #04182f;
+    --primary5-color: #6ddff6;
+    --primary6-color: #6e32b2;
+    --primary7-color: #6366ff;
+    --primary8-color: #1c2e44ad;
+    --primary9-color: #ffffff7a;
+    --primary10-color: #000000;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--primary-color);
+    width: 100%;
+    height: 100vh;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.btn {
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 10px 35px;
+    background: #D4C474;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin-right: 18px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: 'Roboto', sans-serif;
+}
+
+.top-heading {
+    text-align: center;
+}
+
+.sub-heading {
+    color: var(--primary2-color);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.inner-sub-heading {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--primary3-color);
+    margin: 19px 0 20px 0;
+}
+
+.heading-content {
+    font-size: 20px;
+    margin: 0 0 40px 0;
+    color: #ffffffb8;
+}
+
+
+/*========================= navbar css  =========================*/
+.navbar-item {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: all 0.3s ease;
+    padding: 15px 0;
+    background: #000000;
+}
+
+.navbar-item.sticky {
+    background: #202835;
+    padding: 0px 0;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-item .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 135px;
+}
+
+.navbar-item .navbar-menu {
+    display: inline-flex;
+}
+
+ul.navbar-menu.list-unstyled {
+    padding-top: 15px;
+}
+
+.navbar-menu li {
+    list-style: none;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    transition: 0.5s;
+}
+
+.navbar-menu li a:hover {
+    color: #FC5B62;
+}
+
+.icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar-menu .cancel-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.login-icon {}
+
+@media (max-width: 992px) {
+    body.disabled {
+        overflow: hidden;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .icon.hide {
+        display: none;
+    }
+
+    .navbar-item .navbar-menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        left: -100%;
+        top: 0px;
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        background: #202835;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-item.show .navbar-menu {
+        left: 0%;
+    }
+
+    .navbar-item .navbar-menu li {
+        margin-top: 45px;
+    }
+
+    .navbar-item .navbar-menu li a {
+        font-size: 23px;
+        margin-left: -100%;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .navbar-item.show .navbar-menu li a {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar .logo a {
+        font-size: 27px;
+    }
+}
+
+/*========================= hero css  =========================*/
+#hero {
+    background: linear-gradient(#00000073, #00000073), url(../image/hero.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+}
+
+.hero-content {}
+
+.hero-content h1 {
+    color: var(--bs-body-bg);
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 21px;
+    color: var(--bs-body-bg);
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.hero-btn {}
+
+.hero-btn a {
+    width: 219px;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 13px 20px;
+    background: #D4C474;
+    border-radius: 50px;
+    font-size: 18px;
+    color: #000;
+    transition: 0.5s;
+    margin: 0 18px 20px 0;
+}
+
+.hero-btn :hover {
+    background: #fff;
+    color: #000;
+}
+
+@media screen and (max-width:520px) {
+    .hero-content h1 {
+        font-size: 60px;
+    }
+}
+
+/*========================= About area css  =========================*/
+.about-box {
+    /* background: #fff; */
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 15px 36px 15px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    /* border-top: 1px solid rgba(255, 255, 255, 0.5); */
+    /* border-left: 1px solid rgba(255, 255, 255, 0.5); */
+    backdrop-filter: blur(5px);
+    transition: 0.5s;
+}
+
+.about-box img {
+    width: 110px;
+    padding: 20px;
+}
+
+.about-box h3 {
+    color: #fff;
+}
+
+.about-box p {
+    color: #fff;
+    font-weight: 300;
+    font-size: 19px;
+}
+
+/*========================= Protect css  =========================*/
+#protect {
+    padding: 10px 0 50px 0;
+}
+
+.protect-box-item,
+.difference-box-item {
+    padding: 28px 28px 28px 47px;
+    background: linear-gradient(180deg, #ffffff33 0%, #2a2b3100 100%);
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+    transition: 0.5s all;
+}
+
+.protect-box-icon,
+.difference-box-icon {
+    width: 14%;
+}
+
+.protect-box-content,
+.difference-box-content {
+    width: 100%;
+}
+
+.protect-box-content h3,
+.difference-box-contenth3 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.protect-box-content p,
+.difference-box-contentp {
+    font-weight: 300;
+}
+
+.protect-box-icon,
+.difference-box-icon img {
+    width: 59px;
+    padding-right: 6px;
+}
+
+.protect-box-item:nth-child(2) {
+    background: transparent;
+}
+
+.protect-box-item:nth-child(3) {
+    background: transparent;
+}
+
+.protect-box-item:nth-child(2):hover {
+    background: linear-gradient(180deg, #ffffff33 0%, #2a2b3100 100%);
+}
+
+.protect-box-item:nth-child(3):hover {
+    background: linear-gradient(180deg, #ffffff33 0%, #2a2b3100 100%);
+}
+
+.protect,
+.difference {
+    text-align: center;
+}
+
+.protect a,
+.difference a {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 35px;
+}
+
+#difference {
+    padding: 60px 0;
+}
+
+@media screen and (max-width:768px) {
+
+    .protect-box-item,
+    .difference-box-item {
+        display: block;
+        text-align: center;
+    }
+
+    .protect-box-icon,
+    .difference-box-icon {
+        width: 100%;
+    }
+
+    .protect-box-content,
+    .difference-box-content {
+        width: 100%;
+    }
+
+    .protect-box-icon,
+    .difference-box-icon img {
+        width: 53px;
+        margin-bottom: 20px;
+    }
+}
+
+/*========================= Apply css  =========================*/
+#apply {
+    padding: 50px 0;
+}
+
+.apply-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apply-content {}
+
+.apply-content h1 {
+    color: var(--primary3-color);
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.apply-content p {
+    color: var(--primary3-color);
+    font-size: 17px;
+    font-weight: 300;
+    margin: 20px 0 40px 0;
+}
+
+.apply-img {}
+
+.apply-img img {
+    width: 100%;
+}
+
+/*========================= location css  =========================*/
+#location {
+    padding: 50px 0;
+    background: linear-gradient(#00000090, #00000090), url(../image/LOCATION.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+}
+
+.location-content {
+    text-align: center;
+}
+
+.location-content h1 {
+    color: var(--primary3-color);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.location-content p {
+    color: var(--primary3-color);
+    font-size: 25px;
+    font-weight: 300;
+    padding: 0px 8%;
+    margin: 26px 0;
+}
+
+.location-content a {}
+
+/*========================= Footer css  =========================*/
+
+#footer {
+    background: #181a1e;
+    padding: 100px 0px 0px 0px;
+}
+
+.f-logo {
+    width: 180px;
+}
+
+.logo-content {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.footer-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-content ul li a {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8rem;
+    color: #fff;
+}
+
+ul.office {
+    padding-right: 20px;
+}
+
+.office li {
+    color: var(--primary3-color);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.social a i {
+    margin-right: 5px;
+}
+
+.fa-facebook-f {
+    font-size: 1.5rem;
+    padding: 7px 13px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.fa-instagram,
+.fa-twitter {
+    font-size: 1.5rem;
+    padding: 8px 10px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.fa-facebook-f {
+    background: #3b5998;
+}
+
+.fa-instagram {
+    background: #bc2a8d;
+}
+
+.fa-twitter {
+    background: #00aced;
+}
+
+.copyright-message {
+    background: #000;
+    padding: 15px 0px;
+    margin-top: 20px;
+}
+
+.copyright-message span {
+    font-size: 16px;
+}
